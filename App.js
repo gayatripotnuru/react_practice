@@ -1,14 +1,40 @@
 import React from  "react";
 import ReactDOM from "react-dom/client";
+import ReactLogo from "./images/KitchenLogo.png";
 
-//React element is an object.
-var hOneReact = React.createElement("h1", {}, "HEADING CREATED using React");
-//hOneReact is a object
+ 
 
-var htmlRoot = document.getElementById("root");
-var rootReact = ReactDOM.createRoot(htmlRoot);
+var LogoComponent=function(){
+    return(
+    <div className="header">
+        <img src={ReactLogo} height="100px" className="logo"></img>
+        <h2 className="heading">Multicuisine Restaurant</h2>
+        </div>)
+}
 
-//root.render(..) replaces the existing childs in the root with a html element created from hOneReact object
-rootReact.render(hOneReact);
+var ListItemComponent=function(){
+    return(
+<nav>
+            <ul className="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact us</a></li>
+                <li><a href="services">Services</a></li>
+            </ul>
+        </nav>
+    )
+}
 
-console.log(hOneReact);
+const HeaderComponent = function () {
+    return (
+      <header className="header">
+        <LogoComponent />
+        <ListItemComponent />
+      </header>
+    );
+  };
+
+  const mainRoot = document.getElementById("root");
+  const mainDom = ReactDOM.createRoot(mainRoot);
+
+mainDom.render(<HeaderComponent/>)

@@ -1,0 +1,16 @@
+.header {
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Vertical alignment of items */
+    gap: 10px; /* Spacing between the logo and heading */
+  }
+  
+  .logo {
+    width: 100px; /* Adjust logo width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .heading {
+    font-size: 24px; /* Customize font size */
+    font-family: Arial, sans-serif; /* Set font family */
+    margin: 0; /* Remove default margins */
+  }
